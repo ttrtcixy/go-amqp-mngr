@@ -32,12 +32,12 @@ type Worker interface {
 }
 
 type PoolConfig struct {
-	HeartBeatTimeout   time.Duration `env:"AMQP_HEARTBEAT_TIMEOUT,required"`
-	ConnectTimeout     time.Duration `env:"AMQP_CONNECT_TIMEOUT,required"`
-	ConnectKeepAlive   time.Duration `env:"AMQP_KEEP_ALIVE,required"`
-	ReconnectInterval  time.Duration `env:"AMQP_RECONNECT_INTERVAL,required"`
-	InsecureSkipVerify bool          `env:"AMQP_INSECURE_SKIP_VERIFY"        envDefault:"false"`
-	URL                string        `env:"AMQP_URL,required"`
+	HeartBeatTimeout   time.Duration
+	ConnectTimeout     time.Duration
+	ConnectKeepAlive   time.Duration
+	ReconnectInterval  time.Duration
+	InsecureSkipVerify bool
+	URL                string
 }
 
 type Pool struct {
